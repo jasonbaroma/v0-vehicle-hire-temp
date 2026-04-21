@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { companyName, companyTagline } from "@/lib/company";
 import { phoneDisplay, phoneHref } from "@/lib/contact";
 import {
   Clock3,
@@ -16,7 +17,7 @@ export default function Home() {
       <header className="absolute inset-x-0 top-0 z-10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-white">
           <a href="#" className="text-2xl font-bold tracking-tight">
-            DriveNow
+            {companyName}
           </a>
           <div className="hidden items-center gap-3 md:flex">
             <Button className="bg-white text-blue-700 hover:bg-blue-50" asChild>
@@ -215,8 +216,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h4 className="mb-4 font-bold text-white">DriveNow</h4>
-              <p className="text-sm">Your trusted vehicle rental partner</p>
+              <h4 className="mb-4 font-bold text-white">{companyName}</h4>
+              <p className="text-sm">{companyTagline}</p>
             </div>
             <div>
               <h4 className="mb-4 font-bold text-white">Company</h4>
@@ -275,7 +276,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2024 DriveNow. All rights reserved.</p>
+            <p>&copy; 2024 {companyName}. All rights reserved.</p>
           </div>
         </div>
       </footer>
