@@ -75,7 +75,8 @@ export default function Home() {
                   booking assistance from a real rental specialist.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
-                  <div className="rounded-full bg-white/80 px-4 py-2 shadow-sm">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 shadow-sm">
+                    <PhoneCall className="h-4 w-4 text-blue-600" />
                     Priority phone assistance
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 shadow-sm">
@@ -86,7 +87,7 @@ export default function Home() {
               </div>
               <Button
                 size="lg"
-                className="w-full rounded-full bg-slate-950 px-8 py-6 text-base font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-blue-700 md:w-auto"
+                className="w-full rounded-full bg-blue-600 px-8 py-6 text-base font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:-translate-y-0.5 hover:bg-blue-700 md:w-auto"
                 asChild
               >
                 <a href={phoneHref}>Call Now: {phoneDisplay}</a>
