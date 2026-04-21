@@ -1,13 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import {
+  Clock3,
+  PhoneCall,
+  ShieldCheck,
+  Star,
+  Users,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Header */}
+      <header className="absolute inset-x-0 top-0 z-10">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-white">
+          <a href="#" className="text-2xl font-bold tracking-tight">
+            DriveNow
+          </a>
+          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+            <a href="#trust" className="transition hover:text-blue-200">
+              Trust
+            </a>
+            <a href="#benefits" className="transition hover:text-blue-200">
+              Why Us
+            </a>
+            <a href="#contact" className="transition hover:text-blue-200">
+              Contact
+            </a>
+          </nav>
+          <div className="hidden items-center gap-3 md:flex">
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-white/10 hover:text-white"
+            >
+              Sign In
+            </Button>
+            <Button className="bg-white text-blue-700 hover:bg-blue-50">
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 pb-20 pt-32 text-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="flex flex-col gap-6">
@@ -15,14 +51,18 @@ export default function Home() {
                 Your Journey Starts Here
               </h1>
               <p className="text-xl text-blue-100">
-                Book your perfect vehicle for any adventure. Affordable rates, premium service, and 24/7 support.
+                Book your perfect vehicle for any adventure. Affordable rates,
+                premium service, and 24/7 support.
               </p>
-              <Button size="lg" className="w-fit bg-white text-blue-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="w-fit bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Book Now
               </Button>
             </div>
             <div className="hidden lg:block">
-              <div className="h-80 rounded-lg bg-blue-900/40 flex items-center justify-center">
+              <div className="flex h-80 items-center justify-center rounded-lg bg-blue-900/40">
                 <span className="text-blue-300">Vehicle Image</span>
               </div>
             </div>
@@ -33,63 +73,98 @@ export default function Home() {
       {/* Search Section */}
       <section className="relative -mt-12 px-6 pb-12">
         <div className="mx-auto max-w-4xl">
-          <Card className="p-8 shadow-lg">
-            <h2 className="mb-6 text-2xl font-bold">Find Your Perfect Rental</h2>
-            <div className="grid gap-4 md:grid-cols-4">
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Pick-up Location</label>
-                <Input placeholder="City or airport" />
+          <Card className="overflow-hidden border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-sky-100 shadow-[0_24px_60px_-24px_rgba(37,99,235,0.45)]">
+            <div className="flex flex-col gap-6 p-8 md:p-10 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-3 py-1 text-sm font-medium text-blue-700 backdrop-blur">
+                  <PhoneCall className="h-4 w-4" />
+                  Direct Booking Support
+                </div>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">
+                  Need a vehicle fast? Call our team and we&apos;ll reserve it
+                  for you.
+                </h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">
+                  Get instant availability, tailored packages, and same-day
+                  booking assistance from a real rental specialist.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
+                  <div className="rounded-full bg-white/80 px-4 py-2 shadow-sm">
+                    Priority phone assistance
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 shadow-sm">
+                    <Clock3 className="h-4 w-4 text-blue-600" />
+                    Available 24/7
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Pick-up Date</label>
-                <Input type="date" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Return Date</label>
-                <Input type="date" />
-              </div>
-              <div className="flex items-end">
-                <Button className="w-full">Search</Button>
-              </div>
+              <Button
+                size="lg"
+                className="w-full rounded-full bg-slate-950 px-8 py-6 text-base font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-blue-700 md:w-auto"
+                asChild
+              >
+                <a href="tel:+1234567890">Call Now: +1 (234) 567-890</a>
+              </Button>
             </div>
           </Card>
         </div>
       </section>
 
-      {/* Featured Vehicles */}
-      <section className="px-6 py-16">
+      {/* Trust Section */}
+      <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">Featured Vehicles</h2>
+            <h2 className="mb-4 text-4xl font-bold">
+              Trusted by Drivers Everywhere
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Explore our diverse fleet of well-maintained vehicles
+              Rent with confidence thanks to transparent pricing, dependable
+              support, and thousands of happy customers.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { name: "Economy", price: "$25/day", badge: "Popular" },
-              { name: "SUV", price: "$55/day", badge: "Family" },
-              { name: "Luxury", price: "$95/day", badge: "Premium" },
-            ].map((vehicle) => (
-              <Card key={vehicle.name} className="overflow-hidden">
-                <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-400">{vehicle.name} Image</span>
+              {
+                title: "Verified, well-maintained vehicles",
+                description:
+                  "Every vehicle is routinely inspected, cleaned, and prepared before pickup so you can book with peace of mind.",
+                stat: "500+ vehicles checked monthly",
+                icon: ShieldCheck,
+              },
+              {
+                title: "4.9/5 average customer rating",
+                description:
+                  "Travelers choose us for reliable service, flexible booking, and a smooth rental experience from start to finish.",
+                stat: "Rated by 2,000+ recent renters",
+                icon: Star,
+              },
+              {
+                title: "Support from real rental specialists",
+                description:
+                  "Need help fast? Our team is available around the clock for booking updates, changes, and urgent assistance.",
+                stat: "24/7 phone and roadside support",
+                icon: Users,
+              },
+            ].map((item) => (
+              <Card
+                key={item.title}
+                className="border border-slate-100 bg-white p-8 shadow-[0_20px_45px_-25px_rgba(15,23,42,0.22)]"
+              >
+                <div className="mb-6 inline-flex rounded-2xl bg-blue-100 p-4 text-blue-700">
+                  <item.icon className="h-7 w-7" />
                 </div>
-                <div className="p-6">
-                  <div className="mb-2 flex items-center justify-between">
-                    <h3 className="text-xl font-bold">{vehicle.name}</h3>
-                    <Badge variant="secondary">{vehicle.badge}</Badge>
-                  </div>
-                  <p className="mb-4 text-lg font-semibold text-blue-600">
-                    {vehicle.price}
-                  </p>
-                  <ul className="mb-6 space-y-2 text-sm text-muted-foreground">
-                    <li>✓ Unlimited Mileage</li>
-                    <li>✓ Free Cancellation</li>
-                    <li>✓ Insurance Included</li>
-                  </ul>
-                  <Button className="w-full">Book Now</Button>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
+                  Why customers trust us
+                </p>
+                <h3 className="mb-3 text-2xl font-bold text-slate-950">
+                  {item.title}
+                </h3>
+                <p className="mb-5 text-base leading-7 text-slate-600">
+                  {item.description}
+                </p>
+                <div className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
+                  {item.stat}
                 </div>
               </Card>
             ))}
@@ -98,9 +173,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-50 px-6 py-16">
+      <section id="benefits" className="bg-gray-50 px-6 py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-4xl font-bold">Why Choose Us</h2>
+          <h2 className="mb-12 text-center text-4xl font-bold">
+            Why Choose Us
+          </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
@@ -135,14 +212,20 @@ export default function Home() {
           <p className="mb-8 text-lg text-blue-100">
             Book your vehicle today and start your adventure tomorrow
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100"
+          >
             Book Your Vehicle
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-gray-900 px-6 py-12 text-gray-400">
+      <footer
+        id="contact"
+        className="border-t bg-gray-900 px-6 py-12 text-gray-400"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
@@ -152,24 +235,56 @@ export default function Home() {
             <div>
               <h4 className="mb-4 font-bold text-white">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">About Us</a></li>
-                <li><a href="#" className="hover:text-white">Careers</a></li>
-                <li><a href="#" className="hover:text-white">Blog</a></li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Blog
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="mb-4 font-bold text-white">Support</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white">FAQ</a></li>
-                <li><a href="#" className="hover:text-white">Terms</a></li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Terms
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="mb-4 font-bold text-white">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Privacy</a></li>
-                <li><a href="#" className="hover:text-white">Terms of Service</a></li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
