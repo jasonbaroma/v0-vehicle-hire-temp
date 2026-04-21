@@ -158,6 +158,151 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Content Section */}
+      <section className="bg-slate-950 px-6 py-20 text-white">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+              Travel with confidence
+            </p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">
+              {companyName} helps you get on the road faster, safer, and with
+              less hassle.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              From city trips to long-distance journeys, our team focuses on a
+              smooth rental experience from first call to final return. You get
+              clear pricing, dependable support, and vehicles prepared for real
+              travel needs.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button
+                size="lg"
+                className="bg-blue-600 text-white hover:bg-blue-500"
+                asChild
+              >
+                <a href={phoneHref}>Call {phoneDisplay}</a>
+              </Button>
+              <div className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-slate-200">
+                Fast booking confirmation and friendly support
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                value: "10 min",
+                label: "Average booking response time",
+              },
+              {
+                value: "24/7",
+                label: "Phone support for urgent requests",
+              },
+              {
+                value: "Simple",
+                label: "Pickup and return process",
+              },
+              {
+                value: "Clear",
+                label: "Pricing with no surprise fees",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              >
+                <p className="text-3xl font-bold text-white">{item.value}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* UK Content Section */}
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
+            UK Vehicle Hire
+          </p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            Reliable vehicle hire across the UK for business, leisure, and
+            everyday travel.
+          </h2>
+          <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
+            <p>
+              Whether you need a car for city driving in London, a practical
+              vehicle for family travel in Manchester, or a comfortable option
+              for long-distance trips across the UK, {companyName} makes the
+              booking process simple. We focus on clear communication, flexible
+              service, and dependable support from enquiry to return.
+            </p>
+            <p>
+              Our UK rental service is designed for customers who want a smooth
+              experience without unnecessary delays or confusing pricing. With
+              responsive phone support, well-prepared vehicles, and easy
+              booking assistance, we help drivers find the right option for
+              airport pickups, weekend getaways, and day-to-day transport.
+            </p>
+            <p>
+              We regularly support travel needs in major UK areas including
+              London, Birmingham, Manchester, Liverpool, Leeds, Bristol, and
+              surrounding regions. Whether you are arranging a short-term hire
+              for local errands or planning longer travel between cities, our
+              team can help match you with a vehicle that fits your route,
+              passenger needs, and schedule.
+            </p>
+            <p>
+              Customers across the UK choose {companyName} for straightforward
+              booking support, practical vehicle options, and responsive help
+              when plans change. From business travel and airport transfers to
+              family outings and weekend breaks, we aim to keep vehicle hire as
+              simple, flexible, and stress-free as possible.
+            </p>
+          </div>
+          <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
+            {[
+              "England",
+              "Scotland",
+              "Wales",
+              "Northern Ireland",
+              "London",
+              "Manchester",
+              "Birmingham",
+              "Liverpool",
+              "Leeds",
+              "Bristol",
+              "Glasgow",
+              "Edinburgh",
+              "Sheffield",
+              "Newcastle",
+              "Nottingham",
+              "Leicester",
+              "Coventry",
+              "Cardiff",
+              "Belfast",
+              "Southampton",
+              "Portsmouth",
+              "Reading",
+              "Milton Keynes",
+              "Oxford",
+              "Cambridge",
+              "York",
+            ].map((city) => (
+              <div
+                key={city}
+                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
+              >
+                {city}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section id="benefits" className="bg-gray-50 px-6 py-16">
         <div className="mx-auto max-w-6xl">
