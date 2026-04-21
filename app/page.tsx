@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { phoneDisplay, phoneHref } from "@/lib/contact";
 import {
   Clock3,
   PhoneCall,
@@ -17,26 +18,9 @@ export default function Home() {
           <a href="#" className="text-2xl font-bold tracking-tight">
             DriveNow
           </a>
-          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-            <a href="#trust" className="transition hover:text-blue-200">
-              Trust
-            </a>
-            <a href="#benefits" className="transition hover:text-blue-200">
-              Why Us
-            </a>
-            <a href="#contact" className="transition hover:text-blue-200">
-              Contact
-            </a>
-          </nav>
           <div className="hidden items-center gap-3 md:flex">
-            <Button
-              variant="ghost"
-              className="text-white hover:bg-white/10 hover:text-white"
-            >
-              Sign In
-            </Button>
-            <Button className="bg-white text-blue-700 hover:bg-blue-50">
-              Get Started
+            <Button className="bg-white text-blue-700 hover:bg-blue-50" asChild>
+              <a href={phoneHref}>Get Started</a>
             </Button>
           </div>
         </div>
@@ -57,8 +41,9 @@ export default function Home() {
               <Button
                 size="lg"
                 className="w-fit bg-white text-blue-600 hover:bg-gray-100"
+                asChild
               >
-                Book Now
+                <a href={phoneHref}>Book Now</a>
               </Button>
             </div>
             <div className="hidden lg:block">
@@ -103,7 +88,7 @@ export default function Home() {
                 className="w-full rounded-full bg-slate-950 px-8 py-6 text-base font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-blue-700 md:w-auto"
                 asChild
               >
-                <a href="tel:+1234567890">Call Now: +1 (234) 567-890</a>
+                <a href={phoneHref}>Call Now: {phoneDisplay}</a>
               </Button>
             </div>
           </Card>
@@ -215,8 +200,9 @@ export default function Home() {
           <Button
             size="lg"
             className="bg-white text-blue-600 hover:bg-gray-100"
+            asChild
           >
-            Book Your Vehicle
+            <a href={phoneHref}>Book Your Vehicle</a>
           </Button>
         </div>
       </section>
