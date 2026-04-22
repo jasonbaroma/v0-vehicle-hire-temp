@@ -16,8 +16,13 @@ export default function Home() {
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-white">
-          <a href="#" className="text-2xl font-bold tracking-tight">
-            {companyName}
+          <a href="#" className="flex items-center gap-3 text-2xl font-bold tracking-tight">
+            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 shadow-lg shadow-black/10 ring-1 ring-white/20 backdrop-blur">
+              <span className="text-lg font-black leading-none text-white">
+                {companyName.charAt(0)}
+              </span>
+            </span>
+            <span>{companyName}</span>
           </a>
           <div className="hidden items-center gap-3 md:flex">
             <Button className="bg-white text-blue-700 hover:bg-blue-50" asChild>
@@ -263,43 +268,102 @@ export default function Home() {
               family outings and weekend breaks, we aim to keep vehicle hire as
               simple, flexible, and stress-free as possible.
             </p>
-          </div>
-          <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
-            {[
-              "England",
-              "Scotland",
-              "Wales",
-              "Northern Ireland",
-              "London",
-              "Manchester",
-              "Birmingham",
-              "Liverpool",
-              "Leeds",
-              "Bristol",
-              "Glasgow",
-              "Edinburgh",
-              "Sheffield",
-              "Newcastle",
-              "Nottingham",
-              "Leicester",
-              "Coventry",
-              "Cardiff",
-              "Belfast",
-              "Southampton",
-              "Portsmouth",
-              "Reading",
-              "Milton Keynes",
-              "Oxford",
-              "Cambridge",
-              "York",
-            ].map((city) => (
-              <div
-                key={city}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
-              >
-                {city}
+            <div className="flex flex-wrap justify-center gap-3 pt-2">
+              {[
+                "England",
+                "Scotland",
+                "Wales",
+                "Northern Ireland",
+                "London",
+                "Manchester",
+                "Birmingham",
+                "Liverpool",
+                "Leeds",
+                "Bristol",
+                "Glasgow",
+                "Edinburgh",
+                "Sheffield",
+                "Newcastle",
+                "Nottingham",
+                "Leicester",
+                "Coventry",
+                "Cardiff",
+                "Belfast",
+                "Southampton",
+                "Portsmouth",
+                "Reading",
+                "Milton Keynes",
+                "Oxford",
+                "Cambridge",
+                "York",
+              ].map((city) => (
+                <div
+                  key={city}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
+                >
+                  {city}
+                </div>
+              ))}
+            </div>
+            <div className="pt-4">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-950">
+                Popular UK destinations best reached by car
+              </h2>
+              <p className="mt-4">
+                Driving gives you the freedom to explore some of the UK&apos;s
+                most popular destinations at your own pace. A rental vehicle is
+                especially useful when your plans include rural areas, scenic
+                routes, smaller towns, or multiple stops that are harder to
+                reach comfortably by rail alone.
+              </p>
+              <div className="mt-6 space-y-6">
+                <div>
+                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+                    Countryside escapes and scenic drives
+                  </h3>
+                  <p className="mt-2">
+                    Some of the UK&apos;s most memorable trips are best enjoyed
+                    by road. The Cotswolds, Lake District, Peak District, and
+                    Yorkshire Dales all offer routes where driving makes it
+                    easier to visit villages, viewpoints, walking areas, and
+                    local attractions on your own schedule. In Scotland,
+                    exploring the Highlands by car gives you more freedom to
+                    stop for lochs, mountain scenery, and overnight stays in
+                    places that are less convenient to access by public
+                    transport.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+                    Coastal trips and weekend breaks
+                  </h3>
+                  <p className="mt-2">
+                    Driving is also a practical way to reach many of the UK&apos;s
+                    popular coastal destinations. Cornwall, Devon, North Wales,
+                    and parts of the South Coast are much easier to enjoy when
+                    you have the flexibility to carry luggage, beach gear, or
+                    travel with family. A hired vehicle makes weekend breaks
+                    more comfortable and allows you to move easily between
+                    seaside towns, countryside stops, and nearby attractions.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+                    City-to-city travel with more flexibility
+                  </h3>
+                  <p className="mt-2">
+                    For travellers planning city breaks or multi-stop journeys,
+                    driving can offer a more direct and flexible experience.
+                    Destinations such as Bath, York, Edinburgh, Cardiff,
+                    Birmingham, and Manchester are all popular choices for
+                    short stays, business travel, and extended touring. Having
+                    your own vehicle makes it easier to travel between cities,
+                    adjust plans if needed, and include stops that would
+                    otherwise be missed.
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
