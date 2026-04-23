@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -41,28 +42,47 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 pb-20 pt-32 text-white">
+      <section className="relative overflow-hidden pb-20 pt-32 text-white">
+        <Image
+          src="/images/Scenic Road in the UK.jpg"
+          alt="Scenic road in the UK with open countryside views"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-blue-950/65 to-slate-900/45" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(96,165,250,0.2),_transparent_35%)]" />
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="flex flex-col gap-6">
-              <h1 className="text-5xl font-bold tracking-tight">
-                Your Journey Starts Here
-              </h1>
-              <p className="text-xl text-blue-100">
-                Book your perfect vehicle for any adventure. Affordable rates,
-                premium service, and 24/7 support.
-              </p>
-              <Button
-                size="lg"
-                className="w-fit bg-white text-blue-600 hover:bg-gray-100"
-                asChild
-              >
-                <a href={phoneHref}>Book Now</a>
-              </Button>
+          <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
+            <div className="max-w-3xl">
+              <div className="flex flex-col gap-6">
+                <h1 className="text-5xl font-bold tracking-tight">
+                  Your Journey Starts Here
+                </h1>
+                <p className="text-xl text-blue-100">
+                  Book your perfect vehicle for any adventure. Affordable rates,
+                  premium service, and 24/7 support.
+                </p>
+                <Button
+                  size="lg"
+                  className="w-fit bg-white text-blue-600 hover:bg-gray-100"
+                  asChild
+                >
+                  <a href={phoneHref}>Book Now</a>
+                </Button>
+              </div>
             </div>
             <div className="hidden lg:block">
-              <div className="flex h-80 items-center justify-center rounded-lg bg-blue-900/40">
-                <span className="text-blue-300">Vehicle Image</span>
+              <div className="relative h-80 overflow-hidden rounded-3xl border border-white/15 shadow-2xl shadow-blue-950/30">
+                <Image
+                  src="/images/a man on the drivers seat.jpg"
+                  alt="Smiling driver sitting in a car and giving a thumbs up"
+                  fill
+                  className="object-cover"
+                  sizes="420px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent" />
               </div>
             </div>
           </div>
